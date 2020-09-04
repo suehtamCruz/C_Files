@@ -6,6 +6,7 @@ int roleta[4][4] ={
         30  ,87 ,55 ,69,
         13  ,60 ,99 ,66
 }; 
+
 int cartela(int num[]){
     int cont=0;
 
