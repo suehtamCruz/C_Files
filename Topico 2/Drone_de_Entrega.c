@@ -12,7 +12,7 @@ int entrega(int caixa[],int janela[]){
         }
     }   
     int passa = larg+alt;
-    return passa;
+    return passa;   
 }
 
 int main(void){
