@@ -5,9 +5,10 @@ int main(void){
     int valor;
     
     char num[1];
-    scanf("%c %d",&num,&valor);
+    scanf("%c ",&num[0]);
+    scanf("%d",&valor);
 
-    char valString[0];
+    char valString[100];
     //transformando o numero que foi dado para uma string para poder comparar o numero que vai estar presente com cada posição da string
     sprintf(valString,"%d",valor); 
     //quantidade da caracteres do numero passado    
