@@ -3,7 +3,7 @@
 int fatorial(int n){
     int res = 0;    
 
-    if(n ==0){
+    if(n == 0){
         res = 1;
     }else{
         res = n * fatorial(n - 1 );
