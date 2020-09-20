@@ -1,28 +1,36 @@
 #include<stdio.h>
 
-int maiorDivisor(int n){
-  
-    int mdc=0;
-    int cont=0;
-    int somaBase=0;
 
+void maiorDivisor(int n , int *pn ,int *pd){
+ 
+
+    int mdc=0;
+    int numerador=0;
+    int denominador=0;
+ 
     for(int i=1;i<=n;i++){
-        somaBase+=i;
-        cont++;
+        denominador+=i;
+        numerador++;
     }   
-    for(int i=1;i<=somaBase;i++){
-        if(cont%i==0 && somaBase%i==0){
+    int  *pdenomi = &denominador;
+    int *pnumer = &numerador;
+
+
+    for(int i=1;i<=denominador;i++){
+        if(numerador%i==0 && denominador%i==0){
             mdc = i;
         }
     }
-    return mdc;
+    *pd = *pdenomi / mdc;
+    *pn = *pnumer / mdc;
 }
 
 int main(void){
-
+ 
     int n;
     scanf("%d",&n);
-    int mdc = maiorDivisor(n);
-
-    printf("%d",mdc);
+    int denominador;
+    int numerador;
+    maiorDivisor(n,&numerador,&denominador);
+    printf("%d,%d",&numerador,&denominador);
 }
