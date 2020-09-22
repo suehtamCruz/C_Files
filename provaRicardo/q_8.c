@@ -22,14 +22,14 @@ int divPrime(int n){
             }
         }
     }
-    for(int i=2;i<n;i++){
+    
         for(int j=0;j<n;j++){
             if(primes[j] != '\0'){
-                if(i%primes[j]==0){
+                if(n%primes[j]==0){
                     soma+=primes[j];
                 }
             }
-        }
+       
     }
     return soma;
 }
