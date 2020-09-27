@@ -12,7 +12,10 @@ int somaPonteiro(int *p , int tam){
 }
 
 int main(void){
-    int v[5] = {1,3,2,2,1};
+    int v[5] ;
+    for(int i=0;i<5;i++){
+        scanf("%d",&v[i]);
+    }
     int *pVet = v;
     int soma = somaPonteiro(pVet,5);
     printf("\n%d",soma);
