@@ -1,14 +1,15 @@
 #include<stdio.h>
 
-int somaPonteiro(int *p , int tam){
+int *somaPonteiro(int *p , int tam){
     int soma=0;
-
+    int v[1];
     for(int i=0;i<tam;i++){
         soma+=*p;
         p++;
     }
-
-    return soma;
+    v[0]=soma;
+    int *vet = v;
+    return vet;
 }
 
 int main(void){
@@ -17,7 +18,7 @@ int main(void){
         scanf("%d",&v[i]);
     }
     int *pVet = v;
-    int soma = somaPonteiro(pVet,5);
-    printf("\n%d",soma);
+     
+    printf("\n%d",*somaPonteiro(pVet,5));
    return 0;
 }
