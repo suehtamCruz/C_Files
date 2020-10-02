@@ -1,3 +1,0 @@
-testando arquivos em C
-2
-3
