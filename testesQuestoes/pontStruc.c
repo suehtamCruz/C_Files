@@ -12,11 +12,11 @@ int main(void){
     pHoje = &hoje;
 
     pHoje -> hora = 20;
-    pHoje -> minuto = 39;
+    (*pHoje).minuto= 39;
     pHoje -> segundo = 22;
 
     int *pHora = &hoje.minuto;
-    printf("%d",*pHora);
+    printf("%d\n",*pHora);
     printf("%d : %d : %d",hoje.hora , hoje.minuto , hoje.segundo);
     return 0;
 }
